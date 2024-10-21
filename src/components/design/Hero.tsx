@@ -51,14 +51,6 @@ const Hero = async () => {
             >
               Get your popup
             </Link>
-            <Link
-              href="#pricing"
-              className={cn(
-                buttonVariants({ size: "lg", variant: "secondary" })
-              )}
-            >
-              How it works
-            </Link>
           </div>
 
           <div className="flex justify-center items-center gap-4 mt-10">
