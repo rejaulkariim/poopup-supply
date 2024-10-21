@@ -11,31 +11,37 @@ const Hero = async () => {
       <MaxWidthWrapper>
         <div className="max-w-6xl mx-auto text-center">
           <div>
-            <h1 className="tracking-tight text-balance font-extrabold !leading-tight text-foreground text-3xl md:text-6xl">
+            <h1 className="tracking-tight text-balance font-extrabold !leading-tight text-foreground text-5xl md:text-6xl">
               Turn visitors into customers with popup{" "}
               <span className="bg-foreground text-background px-2">
                 notifications
               </span>
             </h1>
-            <p className="mt-6 text-base md:text-xl max-w-3xl mx-auto text-foreground">
+            <p className="mt-6 text-base md:text-lg max-w-3xl mx-auto text-foreground">
               Deliver attention-grabbing pop-up notifications that present
               visitors with hard truths, driving stronger engagement and
               boosting conversions.
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 my-6">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-x-6 my-6">
             <span className="flex gap-1.5 items-center">
               <Check className="h-5 w-5 shrink-0 text-green-600" />
-              <p className="font-normal text-lg">Pay once, use forever</p>
+              <p className="font-normal text-base md:text-lg">
+                Pay once, use forever
+              </p>
             </span>
             <span className="flex gap-1.5 items-center">
               <Check className="h-5 w-5 shrink-0 text-green-600" />
-              <p className="font-normal text-lg">1-minute no-code setup</p>
+              <p className="font-normal text-base md:text-lg">
+                1-minute no-code setup
+              </p>
             </span>
             <span className="flex gap-1.5 items-center">
               <Check className="h-5 w-5 shrink-0 text-green-600" />
-              <p className="font-normal text-lg">Increase conversion rate</p>
+              <p className="font-normal text-base md:text-lg">
+                Increase conversion rate
+              </p>
             </span>
           </div>
           <div className="flex items-center justify-center gap-4">
