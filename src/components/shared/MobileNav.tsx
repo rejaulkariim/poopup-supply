@@ -10,6 +10,7 @@ import {
 import { headerLinks } from "@/constants";
 import { Menu } from "lucide-react";
 import Link from "next/link";
+import GoogleLogin from "./GoogleLogin";
 
 const MobileNav = () => {
   return (
@@ -36,6 +37,8 @@ const MobileNav = () => {
                 </Link>
               </SheetClose>
             ))}
+
+            <GoogleLogin />
           </div>
         </SheetContent>
       </Sheet>

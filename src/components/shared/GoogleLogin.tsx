@@ -9,7 +9,7 @@ const GoogleLogin = () => {
   return (
     <button
       onClick={() => login("google")}
-      className={cn(buttonVariants({ size: "lg" }))}
+      className={cn(buttonVariants({ size: "lg", className: "w-full" }))}
     >
       <FaGoogle className="mr-2 h-4 w-4" />
       Continue with google
