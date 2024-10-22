@@ -61,6 +61,7 @@ const Hero = async () => {
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-background"
                 src="/assets/users/user-2.png"
                 alt="user image"
+                draggable={false}
               />
               <Image
                 height={100}
@@ -68,6 +69,7 @@ const Hero = async () => {
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-background"
                 src="/assets/users/user-3.png"
                 alt="user image"
+                draggable={false}
               />
               <Image
                 height={100}
@@ -75,6 +77,7 @@ const Hero = async () => {
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-background"
                 src="/assets/users/user-4.jpg"
                 alt="user image"
+                draggable={false}
               />
               <Image
                 height={100}
@@ -82,6 +85,7 @@ const Hero = async () => {
                 className="inline-block object-cover h-10 w-10 rounded-full ring-2 ring-background"
                 src="/assets/users/user-5.jpg"
                 alt="user image"
+                draggable={false}
               />
             </div>
 
