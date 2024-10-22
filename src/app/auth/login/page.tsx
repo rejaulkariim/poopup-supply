@@ -1,18 +1,11 @@
+import GoogleLogin from "@/components/shared/GoogleLogin";
 import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
-import { signIn } from "@/lib/auth";
 
 const LoginPage = () => {
   return (
-    <section className="w-full">
+    <section className="">
       <MaxWidthWrapper className="flex justify-center items-center">
-        <form
-          action={async () => {
-            "use server";
-            await signIn("google");
-          }}
-        >
-          <button type="submit">Signin with Google</button>
-        </form>
+        <GoogleLogin />
       </MaxWidthWrapper>
     </section>
   );
