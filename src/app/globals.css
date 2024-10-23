@@ -70,9 +70,11 @@
 .button {
   @apply rounded-full py-5 px-6;
 }
+
 .section-padding {
-  @apply py-10 md:py-24;
+  @apply pt-10 md:pt-32;
 }
+
 .paragraph {
   @apply text-base md:text-lg font-normal;
 }
