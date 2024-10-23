@@ -73,6 +73,9 @@
 .section-padding {
   @apply py-10 md:py-24;
 }
+.paragraph {
+  @apply text-base md:text-lg font-normal;
+}
 
 /* SCROLL BAR STYLES */
 ::-webkit-scrollbar {
