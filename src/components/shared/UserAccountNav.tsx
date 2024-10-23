@@ -1,6 +1,5 @@
-import { DashboardIcon } from "@radix-ui/react-icons";
-import { User } from "next-auth";
-import Link from "next/link";
+import Logout from "@/components/shared/Logout";
+import UserAvatar from "@/components/shared/UserAvatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,12 +8,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
-import Logout from "./Logout";
-import UserAvatar from "./UserAvatar";
+} from "@/components/ui/dropdown-menu";
+import { DashboardIcon } from "@radix-ui/react-icons";
+import { User } from "next-auth";
+import Link from "next/link";
 
-interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
-  user: Pick<User, "name" | "image" | "email">;
+interface UserAccountNavProps {
+  user: User;
 }
 
 const UserAccountNav = ({ user }: UserAccountNavProps) => {

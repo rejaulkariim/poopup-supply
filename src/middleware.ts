@@ -18,9 +18,9 @@ export default async function middleware(request: NextRequest) {
     request.nextUrl.pathname.startsWith(route)
   );
 
-  // Redirect to "/" if trying to access protected routes without being logged in
+  // Redirect to "/auth/login" if trying to access protected routes without being logged in
   if (!session && isProtected) {
-    const signInURL = new URL("/", request.nextUrl.origin);
+    const signInURL = new URL("/auth/login", request.nextUrl.origin);
     return NextResponse.redirect(signInURL.toString());
   }
 

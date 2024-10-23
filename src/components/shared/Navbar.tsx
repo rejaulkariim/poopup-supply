@@ -1,16 +1,16 @@
-import { auth } from "@/lib/auth";
+import Logo from "@/components/shared/Logo";
+import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
+import MobileNav from "@/components/shared/MobileNav";
+import NavItems from "@/components/shared/Navitems";
+import UserAccountNav from "@/components/shared/UserAccountNav";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { getUserFromDB } from "@/server/actions/auth.action";
 import Link from "next/link";
-import { buttonVariants } from "../ui/button";
-import Logo from "./Logo";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import MobileNav from "./MobileNav";
-import NavItems from "./Navitems";
-import UserAccountNav from "./UserAccountNav";
 
 const Navbar = async () => {
-  const session = await auth();
-  console.log(session);
+  const user = await getUserFromDB();
+
   return (
     <header className="h-16 border-b fixed inset-0 inset-x-0 z-50 w-full border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <MaxWidthWrapper>
@@ -27,8 +27,8 @@ const Navbar = async () => {
 
           {/* UserAccountNav or Login on the right */}
           <div className="hidden w-44 md:flex justify-end items-center space-x-4">
-            {session?.user ? (
-              <UserAccountNav user={session?.user} />
+            {user ? (
+              <UserAccountNav user={user} />
             ) : (
               <Link href="/auth/login" className={cn(buttonVariants())}>
                 Login
@@ -36,11 +36,7 @@ const Navbar = async () => {
             )}
           </div>
           <div className="md:hidden w-44 flex justify-end items-center space-x-4">
-            {session?.user ? (
-              <UserAccountNav user={session?.user} />
-            ) : (
-              <MobileNav />
-            )}
+            {user ? <UserAccountNav user={user} /> : <MobileNav />}
           </div>
         </nav>
       </MaxWidthWrapper>
