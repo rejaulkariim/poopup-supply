@@ -9,3 +9,8 @@ export type SiteConfig = {
     github: string;
   };
 };
+
+export type DashboardConfig = {
+  mainNav: MainNavItem[];
+  sidebarNav: SidebarNavItem[];
+};

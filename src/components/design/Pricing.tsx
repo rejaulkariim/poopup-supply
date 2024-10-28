@@ -20,7 +20,7 @@ const Pricing = () => {
         <div className="max-w-md mx-auto rounded-2xl border-2 border-primary shadow-sm overflow-hidden">
           <div className="bg-[#FBF2E4] p-10">
             <div className="mt-4 flex items-center gap-4">
-              <span className="text-5xl font-extrabold">$29</span>
+              <span className="text-5xl font-extrabold">$19</span>
               <span className="text-xl line-through">$49</span>
             </div>
             <ul className="mt-8 space-y-2">

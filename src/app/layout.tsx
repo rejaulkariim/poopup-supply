@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { Bricolage_Grotesque } from "next/font/google";
@@ -68,7 +69,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("antialiased", font.className)}>{children}</body>
+      <body className={cn("antialiased", font.className)}>
+        <main>{children}</main>
+        <Toaster richColors />
+      </body>
     </html>
   );
 }

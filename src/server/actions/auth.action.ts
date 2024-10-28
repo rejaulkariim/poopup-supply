@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 
 export const login = async (provider: string) => {
-  await signIn(provider, { redirectTo: "/dashboard" });
+  await signIn(provider, { redirectTo: "/user/dashboard" });
   revalidatePath("/dashboard");
 };
 
